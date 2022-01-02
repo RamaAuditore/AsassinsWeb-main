@@ -31,8 +31,9 @@ main{
 .menu a{
 	display: block;
 	padding: .9rem;
-	color:#eee;
+	color:rgb(0, 0, 0);
 	text-decoration: none;
+	font-size: larger;
 }
 .menu i{
 	color:red;
@@ -47,11 +48,11 @@ main{
 
 .menu li{position: relative;}
 .menu li:hover > ul{display: block}
-.menu li:hover{ background: red; }
+
 /*Controlador del Header*/
 #header{
     height: 25rem;
-	width: 105.4rem;
+	width:100%;
 	padding: 10% 3rem;
 	text-align: center;
 	color: #eee;
@@ -122,51 +123,82 @@ main{
 
 /*de aca para abajo se controlan los cuadros de las armas*/
 .armas{
-	display: grid;
-	grid-template-columns: 20% 20% 20% 20% 20%;
-}
-.armas li{
-	overflow: hidden;
-	margin: .5rem;
-	border: .2rem #333;
-	padding: 1rem;
-	line-height: 5rem;
-	max-width: 15rem;
-	color:#333;
-	background-color: #448;
-	background-position: center;
-	text-align: center;
+	display: grid;    
+    grid-template-columns: auto auto auto auto auto ;
+    grid-template-rows: auto auto;
+    margin: .6rem;
+    
+    grid-auto-flow: row;
+	cursor:pointer;    
 	
 
+
 }
-.armas :nth-child(1){border-radius: 1rem;
-    background-image: url('../assets/img/hb.png');
-    background-size: 87% ;
+.armas div{
+    display: flex;
+    flex-direction: column;
+	overflow: hidden;
+	margin: 0;
+	border: .2rem #333;
+	padding: 0;
+	line-height: 5rem;
+	max-width: 9rem;
+	width: 20vw;
+	height: 15vh;
+	color:#333;
+	background-color: #448;
+	text-align: center;
+    filter:drop-shadow(5px 5px 5px #000)
+    
+}
+	
+	
+.armas div:nth-child(1){border-radius: 1rem;
+    background-image: url("../assets/img/hb.png");
+    background-size: 99%;
     background-position: center ;
     background-repeat: no-repeat;}
-.armas :nth-child(2){border-radius: 1rem;
-    background-image: url('../assets/img/CAÑO.jpg');
-    background-size: 70% ;
+.armas div:nth-child(2){border-radius: 1rem;
+    background-image: url(../assets/img/CAÑO.jpg);
+    background-size: 98% ;
     background-position: center ;
     background-repeat: no-repeat;}
-.armas :nth-child(3){border-radius: 1rem;
-    background-image: url('../assets/img/Cuchi.jpg');
-    background-size: 70% ;
+.armas div:nth-child(3){border-radius: 1rem;
+    background-image: url(../assets/img/Cuchi.jpg);
+    background-size: 100% 99%; 
     background-position: center ;
     background-repeat: no-repeat;}
-.armas :nth-child(4){border-radius: 1rem;
-    background-image: url('../assets/img/PESA.jpg');
-    background-size: 70% ;
+.armas div:nth-child(4){border-radius: 1rem;
+   background-image: url(../assets/img/PESA.jpg);
+    background-size: 100% 100%;
+
     background-position: center ;
     background-repeat: no-repeat;}
-.armas :nth-child(5){border-radius: 1rem;
-    background-image: url('../assets/img/bashe.png');
-    background-size: 70% ;
+.armas div:nth-child(5){border-radius: 1rem;
+   background-image: url(../assets/img/bashe.png);
+    background-size: 100% 100% ;
     background-position: center ;
     background-repeat: no-repeat;}
 
 
+.T{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+	height: 100%;
+	background: rgba(145, 188, 207, 0.8);
+	box-sizing:border-box;
+	transition: all 500ms ease-out;
+	opacity: 0;
+	margin: 0;
+	visibility: hidden;
+	text-align: center;
+    
+}
+.armas :hover > p.T{opacity: 1 ;visibility: visible;margin:0px;box-sizing:content-box;padding: 0;}
 
+.armas div:hover{transition: all 0.5s 0s ease;filter: blur(1px);filter:drop-shadow(5px 5px 5px #000);}
 
 
 			

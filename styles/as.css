@@ -28,8 +28,9 @@ h2
 .menu a{
 	display: block;
 	padding: .9rem;
-	color:#eee;
+	color:rgb(0, 0, 0);
 	text-decoration: none;
+	font-size: larger;
 }
 .menu i{
 	color:red;
@@ -44,12 +45,12 @@ h2
 
 .menu li{position: relative;}
 .menu li:hover > ul{display: block}
-.menu li:hover{ background: red; }
+
 /*Controlador del Header*/
 #header{
     height: 25rem;
-	width: 105.4rem;
-	padding: 10% 3rem;
+	width: 100%;
+	padding: 6% 3rem;
 	text-align: center;
 	color: #eee;
     text-shadow: 0 0 .5rem #333;
@@ -119,7 +120,7 @@ h2
     grid-template-columns: auto auto auto auto auto ;
     grid-template-rows: auto auto;
     margin: .6rem;
-    justify-content: space-around;
+    
     grid-auto-flow: row;
 	cursor:pointer;    
 	
@@ -134,13 +135,15 @@ h2
 	border: .2rem #333;
 	padding: 0;
 	line-height: 5rem;
-	max-width: 15rem;
+	max-width: 9rem;
 	width: 20vw;
 	height: 15vh;
 	color:#333;
 	background-color: #448;
 	text-align: center;
-    filter:drop-shadow(5px 5px 5px #000)}
+    filter:drop-shadow(5px 5px 5px #000)
+    
+}
 	
 	
 .armas div:nth-child(1){border-radius: 1rem;

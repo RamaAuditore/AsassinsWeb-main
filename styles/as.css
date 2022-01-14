@@ -81,7 +81,10 @@ body{
 
 
 }
-
+.contenedorhis{
+	
+	padding: 1rem;
+}
 
 /* estilos de materealize*/
 .carousel {

@@ -88,42 +88,44 @@ body{
 
 /* estilos de materealize*/
 .carousel {
-   min-height: 635px;
-   overflow: visible;
-
-}
-.carousel .carousel-item{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	user-select: none;
-	
-	width: 300px;
-	height: 680px;
-}
-.carousel .carousel-item img{
-	width: 100%;
-	height: 80%;
-	object-fit: fill;
-	position:absolute;
-	top:90px;
-	left:0;
-	z-index: -1;
-
-}
-.carousel .carousel-item h2{
-	position: inherit;
-	top: 54px;
-	color: rgb(0, 0, 0);
-	font-size:2.4rem;
-}
-.carousel .carousel-item p{
-	position: inherit;
-	top: 620px;
-	color: rgb(255, 255, 255);
-	font-size: xx-large;
-}
+	min-height: 635px;
+	overflow: visible;
+ }
+ 
+ .carousel .carousel-item {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+	 user-select: none;
+	 width: 300px;
+	 height: 680px;
+ }
+ 
+ .carousel .carousel-item img {
+	 width: 100%;
+	 height: 80%;
+	 object-fit: fill;
+	 position: absolute;
+	 top: 90px;
+	 left: 0;
+	 z-index: -1;
+ }
+ 
+ .carousel .carousel-item h2 {
+	 position: inherit;
+	 top: 54px;
+	 color: rgb(0, 0, 0);
+	 font-size: 2.4rem;
+ }
+ 
+ .carousel .carousel-item p {
+	 position: inherit;
+	 top: 620px;
+	 color: rgb(255, 255, 255);
+	 font-size: xx-large;
+ }
+ 
 
 /*de aca para abajo se controlan los cuadros de las armas*/
 .armas{
@@ -159,12 +161,12 @@ body{
 	
 .armas div:nth-child(1){border-radius: 1rem;
     background-image: url("../assets/img/hb.png");
-    background-size: 99%;
+    background-size: 160%;
     background-position: center ;
     background-repeat: no-repeat;}
 .armas div:nth-child(2){border-radius: 1rem;
     background-image: url(../assets/img/CAÑO.jpg);
-    background-size: 98% ;
+    background-size: 160% ;
     background-position: center ;
     background-repeat: no-repeat;}
 .armas div:nth-child(3){border-radius: 1rem;
@@ -203,3 +205,41 @@ body{
 .armas :hover > p.T{opacity: 1 ;visibility: visible;margin:0px;box-sizing:content-box;padding: 0;}
 
 .armas div:hover{transition: all 0.5s 0s ease;filter: blur(1px);filter:drop-shadow(5px 5px 5px #000);}
+
+@media (max-width: 994px) {
+	#header{
+		height: 20rem;
+		
+	}
+	.carousel {
+		display: none; /* O cualquier estilo que desees para ocultar el carousel en dispositivos móviles */
+	}
+	.armas{
+		display: grid;    
+		grid-template-columns: auto auto auto auto auto ;
+		grid-template-rows: auto auto;
+		margin: .6rem;
+		width:30rem;
+		grid-auto-flow: row;
+		cursor:pointer;    
+		
+	}
+	.armas div{
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		margin: 0;
+		border: .2rem #333;
+		padding: 0;
+		line-height: 5rem;
+		max-width: 9rem;
+		width: 15vw;
+		height: 15vh;
+		color:#333;
+		background-color: #448;
+		text-align: center;
+		filter:drop-shadow(5px 5px 5px #000)
+		
+	}
+	
+	 }
